@@ -1,0 +1,325 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f8e7d6;
+    --secondary-color: #e7dfef;
+    --tertiary-color: #f0e4dc;
+    --dark-color: #333135;
+    --dark-color-hover: #484748;
+    --light-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--secondary-color);
+    background: linear-gradient(201deg, var(--secondary-color) 20%, var(--primary-color) 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+*::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #F6ECE6;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #F6ECE6;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #E9E0DA;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #333135;
+  border: 2px solid #F6ECE6;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #3E3D3E;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #484748;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    height: 72px;
+    /* background-color: var(--dark-color); */
+    /* color: var(--light-color); */
+}
+
+header .logo-wrapper {
+    height: 100%;
+}
+
+header .logo-wrapper img{
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    gap: 36px;
+}
+
+header nav ul a {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+header nav ul a:hover {
+    color: var(--dark-color-hover);
+}
+
+header nav ul a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-color);
+    transition: width .3s;
+}
+
+header nav ul a:hover::after {
+    width: 100%;
+}
+
+main section.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 0 2rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+main section.hero .hero-content {
+    width: 40%;
+    text-align: justify;
+}
+
+main section.hero .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+main section.hero .hero-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+main section.products {
+    padding: 0 4rem;
+}
+
+main section.products h2 {
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+main section.products .product.inverted {
+    flex-direction: row-reverse;
+}
+
+main section.products .product {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+main section.products .product .product-image {
+    border: 1px solid var(--dark-color);
+    background-color: var(--tertiary-color);
+    width: 40%;
+}
+
+main section.products .product .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section.products .product .product-content {
+    width: 50%;
+}
+
+main section.products .product .product-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+main section.products .product .product-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+main section.products .product .product-content button {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    transition: all .3s;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+main section.products .product .product-content button:hover {
+    background-color: var(--dark-color-hover);
+}
+
+footer {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin-top: 4rem;
+    line-height: 1.2rem;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    padding: 0 2rem;
+}
+
+footer .footer-content div {
+    height: 100%;
+    width: 30%;
+}
+
+footer .footer-content h3 {
+    margin: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+footer .footer-content .address .footer-logo {
+    height: 100%;
+}
+
+footer .footer-content .address .footer-logo img {
+    max-height: 100%;
+    max-width: 240%;
+}
+
+footer .footer-content .address,
+footer .footer-content .contact,
+footer .footer-content .social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .footer-content .social-media a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    width: fit-content;
+}
+
+footer .footer-content .social-media a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-color);
+    transition: width .3s;
+}
+
+footer .footer-content .social-media a:hover::after {
+    width: 100%;
+}
+
+@media(max-width: 790px){
+    header {
+        padding: .5rem 1rem;
+    }
+
+    header nav ul {
+        gap: 24px;
+    }
+
+    main section.hero {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main section.hero .hero-content {
+        width: 100%;
+    }
+
+    main section.products {
+        padding: 0 2rem;
+    }
+
+    main section.products h2 {
+        font-size: 2rem;
+    }
+
+    main section.products .product .product-image {
+        width: 100%;
+    }
+
+    main section.products .product .product-content {
+        width: 100%;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer .footer-content div {
+        width: 100%;
+    }
+
+    footer .footer-content .address .footer-logo img {
+        max-width: 100%;
+    }
+}
+
+@media(min-width: 1440px){
+    main {
+        padding: 0 5vw;
+    }
+}
